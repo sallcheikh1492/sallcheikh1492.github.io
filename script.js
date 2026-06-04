@@ -1,48 +1,52 @@
 // ===================== Données projets =====================
+// links : { kind: "demo" | "repo" | "dataset" | "powerbi", url }
+// metrics : KPI RÉELS uniquement (jamais inventés)
 const PROJECTS = [
   {
     icon: "🎓", featured: true, badge: { fr: "Mémoire Master 2", en: "M.Sc. thesis" },
     title: "BI &amp; ML — Optimisation des centres d'appels",
     img: "assets/memoire-preview.png",
-    demo: "https://cheikh-sall.streamlit.app",
     metrics: ["AUC 0,72", "MAPE 12,6 %", "444k appels"],
     fr: "Application décisionnelle complète sur ~444 000 appels : ETL, tableaux de bord KPI, prévision du volume (SARIMA/LSTM), prédiction de l'abandon (XGBoost + SHAP), analyse de survie (Kaplan-Meier/Cox) et dimensionnement Erlang.",
     en: "End-to-end decision app on ~444k calls: ETL, KPI dashboards, volume forecasting (SARIMA/LSTM), churn/abandonment prediction (XGBoost + SHAP), survival analysis (Kaplan-Meier/Cox) and Erlang staffing.",
     tags: ["Python", "Streamlit", "XGBoost", "SHAP", "SARIMA", "Erlang"],
-    repo: "https://github.com/kheuch1492/memoire-master2-bi-ucad",
+    links: [
+      { kind: "demo", url: "https://cheikh-sall.streamlit.app" },
+      { kind: "repo", url: "https://github.com/kheuch1492/memoire-master2-bi-ucad" },
+    ],
   },
   {
     icon: "📉", badge: { fr: "Data Science", en: "Data Science" },
     metrics: ["ROC-AUC 0,844"],
     title: "Customer Churn Prediction",
-    fr: "Prédiction du départ des clients (Telco) : EDA, Gradient Boosting (ROC-AUC 0,844), dashboard Power BI et application web interactive.",
-    en: "Telco customer churn prediction: EDA, Gradient Boosting (ROC-AUC 0.844), Power BI dashboard and interactive web app.",
+    fr: "Identification des clients à risque de départ pour réduire les pertes : exploration (EDA), modèle Gradient Boosting (ROC-AUC 0,844) et dashboard Power BI.",
+    en: "Identifying at-risk customers to reduce churn: EDA, Gradient Boosting model (ROC-AUC 0.844) and Power BI dashboard.",
     tags: ["Python", "Gradient Boosting", "Power BI", "EDA"],
-    repo: "https://github.com/kheuch1492/customer-churn-prediction",
+    links: [{ kind: "repo", url: "https://github.com/kheuch1492/customer-churn-prediction" }],
   },
   {
     icon: "💹", badge: { fr: "Business Intelligence", en: "Business Intelligence" },
-    title: "Financial Analysis Dashboard",
-    fr: "Analyse financière d'une entreprise : KPI, compte de résultat, prévisions et tableau de bord (Python, SQL, Power BI).",
-    en: "Corporate financial analysis: KPIs, income statement, forecasts and dashboard (Python, SQL, Power BI).",
+    title: "Dashboard financier",
+    fr: "Analyse du chiffre d'affaires, des coûts, des marges et des profits : KPI financiers et prévisions sur tableau de bord Power BI.",
+    en: "Revenue, cost, margin and profit analysis: financial KPIs and forecasts on a Power BI dashboard.",
     tags: ["Python", "SQL", "Power BI", "DAX"],
-    repo: "https://github.com/kheuch1492/financial-analysis-dashboard",
+    links: [{ kind: "repo", url: "https://github.com/kheuch1492/financial-analysis-dashboard" }],
   },
   {
     icon: "👥", badge: { fr: "People Analytics", en: "People Analytics" },
-    title: "HR Analytics Dashboard",
-    fr: "Analyse RH des employés : turnover, absentéisme, satisfaction et identification des profils à risque (Python, PostgreSQL, Power BI/DAX).",
-    en: "HR employee analytics: turnover, absenteeism, satisfaction and at-risk profile detection (Python, PostgreSQL, Power BI/DAX).",
+    title: "Dashboard RH",
+    fr: "Suivi du turnover, de l'absentéisme et du recrutement ; identification des profils à risque (People Analytics).",
+    en: "Tracking turnover, absenteeism and recruitment; at-risk profile detection (People Analytics).",
     tags: ["Python", "PostgreSQL", "Power BI", "DAX"],
-    repo: "https://github.com/kheuch1492/hr-analytics-dashboard",
+    links: [{ kind: "repo", url: "https://github.com/kheuch1492/hr-analytics-dashboard" }],
   },
   {
     icon: "🛒", badge: { fr: "Business Intelligence", en: "Business Intelligence" },
-    title: "E-commerce Sales Analysis",
-    fr: "Analyse BI complète des ventes e-commerce : exploration, indicateurs et visualisations.",
-    en: "Full BI analysis of e-commerce sales: exploration, metrics and visualizations.",
-    tags: ["BI", "Analyse", "Visualisation"],
-    repo: "https://github.com/kheuch1492/ecommerce-sales-analysis",
+    title: "Analyse e-commerce",
+    fr: "Analyse des ventes e-commerce et segmentation client : indicateurs, tendances et visualisations décisionnelles.",
+    en: "E-commerce sales analysis and customer segmentation: metrics, trends and decision-oriented visualizations.",
+    tags: ["BI", "Analyse", "Segmentation"],
+    links: [{ kind: "repo", url: "https://github.com/kheuch1492/ecommerce-sales-analysis" }],
   },
   {
     icon: "🧾", badge: { fr: "Développement", en: "Development" },
@@ -50,7 +54,7 @@ const PROJECTS = [
     fr: "Application web de facturation : gestion des factures, clients et produits.",
     en: "Web billing application: invoices, clients and products management.",
     tags: ["JavaScript", "Web"],
-    repo: "https://github.com/kheuch1492/TV7-App",
+    links: [{ kind: "repo", url: "https://github.com/kheuch1492/TV7-App" }],
   },
   {
     icon: "🚗", badge: { fr: "Développement", en: "Development" },
@@ -58,9 +62,16 @@ const PROJECTS = [
     fr: "Application de gestion pour une activité automobile (clients, véhicules, opérations).",
     en: "Management app for an automotive business (clients, vehicles, operations).",
     tags: ["TypeScript", "Web"],
-    repo: "https://github.com/kheuch1492/thiam-et-frere-automobile",
+    links: [{ kind: "repo", url: "https://github.com/kheuch1492/thiam-et-frere-automobile" }],
   },
 ];
+
+const LINK_LABELS = {
+  demo: { fr: "🚀 Démo live", en: "🚀 Live demo" },
+  repo: { fr: "GitHub", en: "GitHub" },
+  dataset: { fr: "📊 Données", en: "📊 Dataset" },
+  powerbi: { fr: "📈 Power BI", en: "📈 Power BI" },
+};
 
 // ===================== Rendu projets =====================
 function renderProjects(lang) {
@@ -78,8 +89,7 @@ function renderProjects(lang) {
         <p>${p[lang]}</p>
         <div class="pc-tags">${p.tags.map(t => `<span>${t}</span>`).join("")}</div>
         <div class="pc-links">
-          ${p.demo ? `<a class="demo" href="${p.demo}" target="_blank" rel="noopener">🚀 Démo →</a>` : ""}
-          <a href="${p.repo}" target="_blank" rel="noopener">GitHub →</a>
+          ${p.links.map(l => `<a class="${l.kind === "demo" ? "demo" : ""}" href="${l.url}" target="_blank" rel="noopener">${LINK_LABELS[l.kind][lang]} →</a>`).join("")}
         </div>
       </div>
     </article>
