@@ -1,6 +1,6 @@
 # kheuch1492.github.io
 
-Portfolio personnel de **Cheikh Sall** — Data Scientist &amp; BI Analyst.
+Portfolio personnel de **Cheikh Sall** — Data Analyst | Business Intelligence Engineer.
 
 🌐 **En ligne : https://kheuch1492.github.io**
 
