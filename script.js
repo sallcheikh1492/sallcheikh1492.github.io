@@ -4,6 +4,7 @@ const PROJECTS = [
     icon: "🎓", featured: true, badge: { fr: "Mémoire Master 2", en: "M.Sc. thesis" },
     title: "BI &amp; ML — Optimisation des centres d'appels",
     img: "assets/memoire-preview.png",
+    demo: "https://cheikh-sall.streamlit.app",
     metrics: ["AUC 0,72", "MAPE 12,6 %", "444k appels"],
     fr: "Application décisionnelle complète sur ~444 000 appels : ETL, tableaux de bord KPI, prévision du volume (SARIMA/LSTM), prédiction de l'abandon (XGBoost + SHAP), analyse de survie (Kaplan-Meier/Cox) et dimensionnement Erlang.",
     en: "End-to-end decision app on ~444k calls: ETL, KPI dashboards, volume forecasting (SARIMA/LSTM), churn/abandonment prediction (XGBoost + SHAP), survival analysis (Kaplan-Meier/Cox) and Erlang staffing.",
