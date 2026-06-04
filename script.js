@@ -42,11 +42,19 @@ const PROJECTS = [
   },
   {
     icon: "🧾", badge: { fr: "Développement", en: "Development" },
-    title: "Applications de gestion / facturation",
-    fr: "Développement d'applications métier (facturation, gestion) — TV7-App, facturation-senegal, automobile.",
-    en: "Business app development (billing, management) — TV7-App, facturation-senegal, automobile.",
-    tags: ["JavaScript", "TypeScript", "Web"],
-    repo: "https://github.com/kheuch1492?tab=repositories",
+    title: "TV7-App — Facturation",
+    fr: "Application web de facturation : gestion des factures, clients et produits.",
+    en: "Web billing application: invoices, clients and products management.",
+    tags: ["JavaScript", "Web"],
+    repo: "https://github.com/kheuch1492/TV7-App",
+  },
+  {
+    icon: "🚗", badge: { fr: "Développement", en: "Development" },
+    title: "Thiam &amp; Frère Automobile",
+    fr: "Application de gestion pour une activité automobile (clients, véhicules, opérations).",
+    en: "Management app for an automotive business (clients, vehicles, operations).",
+    tags: ["TypeScript", "Web"],
+    repo: "https://github.com/kheuch1492/thiam-et-frere-automobile",
   },
 ];
 
