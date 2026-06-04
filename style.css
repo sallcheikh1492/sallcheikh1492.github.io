@@ -145,7 +145,19 @@ section { scroll-margin-top: 80px; }
 .tl-content h4 { margin: .3rem 0 .5rem; font-size: 1.1rem; }
 .tl-content p { color: var(--text-soft); font-size: .95rem; }
 
+/* Timeline list (expérience) */
+.tl-list { margin: .5rem 0 0; padding-left: 1.1rem; color: var(--text-soft); }
+.tl-list li { font-size: .94rem; margin-bottom: .25rem; }
+
+/* Education + langues */
+.edu-grid { display: grid; grid-template-columns: 1.7fr 1fr; gap: 2rem; align-items: start; }
+.lang-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 1.4rem; box-shadow: var(--shadow); }
+.lang-card h4 { color: var(--primary-2); margin-bottom: 1rem; }
+.lang-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: .7rem; font-weight: 600; }
+.lang-row .lvl { color: var(--primary-2); letter-spacing: 2px; font-size: .9rem; }
+
 /* Contact */
+.contact-info { display: flex; gap: 1.4rem; justify-content: center; flex-wrap: wrap; color: var(--text-soft); font-weight: 600; margin-bottom: 1.5rem; }
 .contact { text-align: center; }
 .contact-lead { color: var(--text-soft); max-width: 540px; margin: 0 auto 1.8rem; font-size: 1.1rem; }
 .contact-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
@@ -157,6 +169,7 @@ footer { text-align: center; padding: 2.5rem 1rem; color: var(--text-soft); bord
 @media (max-width: 760px) {
   .nav-links { display: none; }
   .about-grid { grid-template-columns: 1fr; }
+  .edu-grid { grid-template-columns: 1fr; }
   .project-card.featured { grid-column: span 1; }
 }
 
