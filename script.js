@@ -3,6 +3,8 @@ const PROJECTS = [
   {
     icon: "🎓", featured: true, badge: { fr: "Mémoire Master 2", en: "M.Sc. thesis" },
     title: "BI &amp; ML — Optimisation des centres d'appels",
+    img: "assets/memoire-preview.png",
+    metrics: ["AUC 0,72", "MAPE 12,6 %", "444k appels"],
     fr: "Application décisionnelle complète sur ~444 000 appels : ETL, tableaux de bord KPI, prévision du volume (SARIMA/LSTM), prédiction de l'abandon (XGBoost + SHAP), analyse de survie (Kaplan-Meier/Cox) et dimensionnement Erlang.",
     en: "End-to-end decision app on ~444k calls: ETL, KPI dashboards, volume forecasting (SARIMA/LSTM), churn/abandonment prediction (XGBoost + SHAP), survival analysis (Kaplan-Meier/Cox) and Erlang staffing.",
     tags: ["Python", "Streamlit", "XGBoost", "SHAP", "SARIMA", "Erlang"],
@@ -10,6 +12,7 @@ const PROJECTS = [
   },
   {
     icon: "📉", badge: { fr: "Data Science", en: "Data Science" },
+    metrics: ["ROC-AUC 0,844"],
     title: "Customer Churn Prediction",
     fr: "Prédiction du départ des clients (Telco) : EDA, Gradient Boosting (ROC-AUC 0,844), dashboard Power BI et application web interactive.",
     en: "Telco customer churn prediction: EDA, Gradient Boosting (ROC-AUC 0.844), Power BI dashboard and interactive web app.",
@@ -63,15 +66,19 @@ function renderProjects(lang) {
   const grid = document.getElementById("projectsGrid");
   grid.innerHTML = PROJECTS.map(p => `
     <article class="project-card${p.featured ? " featured" : ""}">
-      <div class="pc-top">
-        <span class="pc-icon">${p.icon}</span>
-        <span class="pc-badge">${p.badge[lang]}</span>
-      </div>
-      <h4>${p.title}</h4>
-      <p>${p[lang]}</p>
-      <div class="pc-tags">${p.tags.map(t => `<span>${t}</span>`).join("")}</div>
-      <div class="pc-links">
-        <a href="${p.repo}" target="_blank" rel="noopener">GitHub →</a>
+      ${p.img ? `<img class="pc-img" src="${p.img}" alt="${p.title}" loading="lazy"/>` : ""}
+      <div class="pc-body">
+        <div class="pc-top">
+          <span class="pc-icon">${p.icon}</span>
+          <span class="pc-badge">${p.badge[lang]}</span>
+        </div>
+        <h4>${p.title}</h4>
+        ${p.metrics ? `<div class="pc-metrics">${p.metrics.map(m => `<span>${m}</span>`).join("")}</div>` : ""}
+        <p>${p[lang]}</p>
+        <div class="pc-tags">${p.tags.map(t => `<span>${t}</span>`).join("")}</div>
+        <div class="pc-links">
+          <a href="${p.repo}" target="_blank" rel="noopener">GitHub →</a>
+        </div>
       </div>
     </article>
   `).join("");
@@ -114,4 +121,10 @@ themeBtn.addEventListener("click", () => {
   applyTheme(t);
   applyLang("fr");
   document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Apparition au scroll
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add("visible"); obs.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll(".section").forEach(s => { s.classList.add("reveal"); obs.observe(s); });
 })();
