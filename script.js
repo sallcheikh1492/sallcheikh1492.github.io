@@ -17,36 +17,49 @@ const PROJECTS = [
   },
   {
     icon: "📉", badge: { fr: "Data Science", en: "Data Science" },
-    metrics: ["ROC-AUC 0,844"],
-    title: "Customer Churn Prediction",
-    fr: "Identification des clients à risque de départ pour réduire les pertes : exploration (EDA), modèle Gradient Boosting (ROC-AUC 0,844) et dashboard Power BI.",
-    en: "Identifying at-risk customers to reduce churn: EDA, Gradient Boosting model (ROC-AUC 0.844) and Power BI dashboard.",
-    tags: ["Python", "Gradient Boosting", "Power BI", "EDA"],
-    links: [{ kind: "repo", url: "https://github.com/kheuch1492/customer-churn-prediction" }],
+    img: "assets/churn.png",
+    metrics: ["AUC 0,846", "6 modèles comparés", "scoring du risque"],
+    title: "Prédiction du churn client",
+    fr: "Identification des clients à risque de départ pour réduire les pertes : 6 modèles comparés (meilleur : Gradient Boosting, AUC 0,846), scoring de probabilité par client et liste des clients prioritaires à contacter (dashboard Power BI).",
+    en: "Identifying at-risk customers to reduce churn: 6 models compared (best: Gradient Boosting, AUC 0.846), per-customer probability scoring and a priority call list (Power BI dashboard).",
+    tags: ["Python", "Gradient Boosting", "XGBoost", "Power BI"],
+    links: [
+      { kind: "repo", url: "https://github.com/kheuch1492/customer-churn-prediction" },
+      { kind: "dataset", url: "https://www.kaggle.com/datasets/blastchar/telco-customer-churn" },
+    ],
   },
   {
     icon: "💹", badge: { fr: "Business Intelligence", en: "Business Intelligence" },
+    img: "assets/finance.png",
+    metrics: ["CA ≈ 117 M$", "5 segments", "multi-pays"],
     title: "Dashboard financier",
-    fr: "Analyse du chiffre d'affaires, des coûts, des marges et des profits : KPI financiers et prévisions sur tableau de bord Power BI.",
-    en: "Revenue, cost, margin and profit analysis: financial KPIs and forecasts on a Power BI dashboard.",
-    tags: ["Python", "SQL", "Power BI", "DAX"],
+    fr: "Analyse du chiffre d'affaires, des marges et des profits : évolution mensuelle CA/profit, profit par produit, répartition par segment client (Government, Small Business, Enterprise…) et CA par pays.",
+    en: "Revenue, margin and profit analysis: monthly revenue/profit trend, profit by product, breakdown by customer segment (Government, Small Business, Enterprise…) and revenue by country.",
+    tags: ["Power BI", "DAX", "SQL", "Modélisation"],
     links: [{ kind: "repo", url: "https://github.com/kheuch1492/financial-analysis-dashboard" }],
   },
   {
     icon: "👥", badge: { fr: "People Analytics", en: "People Analytics" },
+    img: "assets/hr.png",
+    metrics: ["Attrition 33,4 %", "311 employés", "6 départements"],
     title: "Dashboard RH",
-    fr: "Suivi du turnover, de l'absentéisme et du recrutement ; identification des profils à risque (People Analytics).",
-    en: "Tracking turnover, absenteeism and recruitment; at-risk profile detection (People Analytics).",
-    tags: ["Python", "PostgreSQL", "Power BI", "DAX"],
+    fr: "Suivi de l'attrition (33,4 %), du turnover et de l'absentéisme : analyse par département (Production 39,7 %…) et par ancienneté (0-2 ans : 96,8 %) pour cibler la rétention.",
+    en: "Attrition (33.4%), turnover and absenteeism tracking: analysis by department (Production 39.7%…) and tenure (0-2 yrs: 96.8%) to target retention.",
+    tags: ["Power BI", "DAX", "People Analytics"],
     links: [{ kind: "repo", url: "https://github.com/kheuch1492/hr-analytics-dashboard" }],
   },
   {
     icon: "🛒", badge: { fr: "Business Intelligence", en: "Business Intelligence" },
+    img: "assets/ecommerce.png",
+    metrics: ["CA £9M", "19K commandes", "réachat 65,6 %"],
     title: "Analyse e-commerce",
-    fr: "Analyse des ventes e-commerce et segmentation client : indicateurs, tendances et visualisations décisionnelles.",
-    en: "E-commerce sales analysis and customer segmentation: metrics, trends and decision-oriented visualizations.",
-    tags: ["BI", "Analyse", "Segmentation"],
-    links: [{ kind: "repo", url: "https://github.com/kheuch1492/ecommerce-sales-analysis" }],
+    fr: "Analyse des ventes e-commerce (dataset UCI Online Retail) : CA £9M, 19K commandes, 4 338 clients, panier moyen £480, taux de réachat 65,6 %, évolution mensuelle et top pays.",
+    en: "E-commerce sales analysis (UCI Online Retail dataset): £9M revenue, 19K orders, 4,338 customers, £480 average basket, 65.6% repeat rate, monthly trend and top countries.",
+    tags: ["Power BI", "DAX", "Analyse", "Segmentation"],
+    links: [
+      { kind: "repo", url: "https://github.com/kheuch1492/ecommerce-sales-analysis" },
+      { kind: "dataset", url: "https://archive.ics.uci.edu/dataset/352/online+retail" },
+    ],
   },
   {
     icon: "🧾", badge: { fr: "Développement", en: "Development" },
@@ -78,7 +91,7 @@ function renderProjects(lang) {
   const grid = document.getElementById("projectsGrid");
   grid.innerHTML = PROJECTS.map(p => `
     <article class="project-card${p.featured ? " featured" : ""}">
-      ${p.img ? `<img class="pc-img" src="${p.img}" alt="${p.title}" loading="lazy"/>` : ""}
+      ${p.img ? `<img class="pc-img" src="${p.img}" alt="${p.title}" loading="lazy" onerror="this.remove()"/>` : ""}
       <div class="pc-body">
         <div class="pc-top">
           <span class="pc-icon">${p.icon}</span>
