@@ -77,6 +77,7 @@ function renderProjects(lang) {
         <p>${p[lang]}</p>
         <div class="pc-tags">${p.tags.map(t => `<span>${t}</span>`).join("")}</div>
         <div class="pc-links">
+          ${p.demo ? `<a class="demo" href="${p.demo}" target="_blank" rel="noopener">🚀 Démo →</a>` : ""}
           <a href="${p.repo}" target="_blank" rel="noopener">GitHub →</a>
         </div>
       </div>
