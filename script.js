@@ -77,6 +77,7 @@ const PROJECTS = [
   {
     icon: "🧾", badge: { fr: "Développement", en: "Development" },
     title: "TV7-App — Facturation",
+    img: "assets/tv7-app.png",
     fr: "Application web de facturation : gestion des factures, clients et produits.",
     en: "Web billing application: invoices, clients and products management.",
     tags: ["JavaScript", "Web"],
@@ -85,6 +86,7 @@ const PROJECTS = [
   {
     icon: "🚗", badge: { fr: "Développement", en: "Development" },
     title: "Thiam &amp; Frère Automobile",
+    img: "assets/thiam-automobile.png",
     fr: "Application de gestion pour une activité automobile (clients, véhicules, opérations).",
     en: "Management app for an automotive business (clients, vehicles, operations).",
     tags: ["TypeScript", "Web"],
