@@ -16,6 +16,19 @@ const PROJECTS = [
     ],
   },
   {
+    icon: "📡", badge: { fr: "Télécom · Web", en: "Telecom · Web" },
+    title: "Guide interactif d'analyse réseau télécom",
+    img: "https://kheuch1492.github.io/reseau-telecom/cover.svg",
+    metrics: ["2G → 5G", "PWA hors-ligne", "Données ARTP"],
+    fr: "Application web (PWA) de référence et de révision sur la performance des réseaux mobiles : KPI (CSSR, DCR…), diagnostic d'alarmes, arbres de décision, optimisation radio, drive test, données de marché ARTP, quiz et simulateur NOC. Conçue de A à Z en HTML/CSS/JS, installable et utilisable hors-ligne.",
+    en: "Reference & revision web app (PWA) on mobile-network performance: KPIs (CSSR, DCR…), alarm troubleshooting, decision trees, radio optimization, drive test, ARTP market data, quiz and NOC simulator. Built from scratch in HTML/CSS/JS, installable and offline-ready.",
+    tags: ["JavaScript", "HTML/CSS", "PWA", "Télécom", "KPI"],
+    links: [
+      { kind: "demo", url: "https://kheuch1492.github.io/reseau-telecom/" },
+      { kind: "repo", url: "https://github.com/kheuch1492/reseau-telecom" },
+    ],
+  },
+  {
     icon: "📉", badge: { fr: "Data Science", en: "Data Science" },
     img: "assets/churn.png",
     metrics: ["AUC 0,846", "6 modèles comparés", "scoring du risque"],
