@@ -29,6 +29,15 @@ const PROJECTS = [
     ],
   },
   {
+    icon: "📡", badge: { fr: "Data · Télécom", en: "Data · Telecom" },
+    title: "Network KPI Analytics — Dashboard",
+    metrics: ["60 cellules", "~43k mesures", "2G → 5G"],
+    fr: "Tableau de bord d'analyse de la performance d'un réseau mobile : suivi des KPI (CSSR, DCR, PRB…), détection des cellules en saturation, anomalies, pires cellules et carte de couverture. Données synthétiques réalistes (60 cellules, KPI horaires sur 30 jours).",
+    en: "Mobile-network performance dashboard: KPI monitoring (CSSR, DCR, PRB…), saturated-cell detection, anomalies, worst cells and a coverage map. Realistic synthetic data (60 cells, hourly KPIs over 30 days).",
+    tags: ["Python", "Streamlit", "pandas", "Plotly", "Télécom"],
+    links: [{ kind: "repo", url: "https://github.com/kheuch1492/network-kpi-dashboard" }],
+  },
+  {
     icon: "📉", badge: { fr: "Data Science", en: "Data Science" },
     img: "assets/churn.png",
     metrics: ["AUC 0,846", "6 modèles comparés", "scoring du risque"],
