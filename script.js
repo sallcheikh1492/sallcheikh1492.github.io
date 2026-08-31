@@ -11,7 +11,7 @@ const PROJECTS = [
     en: "End-to-end decision app on ~444k calls: ETL, KPI dashboards, volume forecasting (SARIMA/LSTM), churn/abandonment prediction (XGBoost + SHAP), survival analysis (Kaplan-Meier/Cox) and Erlang staffing.",
     tags: ["Python", "Streamlit", "XGBoost", "SHAP", "SARIMA", "Erlang"],
     links: [
-      { kind: "demo", url: "https://cheikh-sall.streamlit.app" },
+      { kind: "demo", url: "https://cheikh-sall1492.streamlit.app" },
       { kind: "repo", url: "https://github.com/sallcheikh1492/memoire-master2-bi-ucad" },
     ],
   },
