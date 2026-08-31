@@ -12,30 +12,21 @@ const PROJECTS = [
     tags: ["Python", "Streamlit", "XGBoost", "SHAP", "SARIMA", "Erlang"],
     links: [
       { kind: "demo", url: "https://cheikh-sall.streamlit.app" },
-      { kind: "repo", url: "https://github.com/kheuch1492/memoire-master2-bi-ucad" },
+      { kind: "repo", url: "https://github.com/sallcheikh1492/memoire-master2-bi-ucad" },
     ],
   },
   {
     icon: "📡", badge: { fr: "Télécom · Web", en: "Telecom · Web" },
     title: "Guide interactif d'analyse réseau télécom",
-    img: "https://kheuch1492.github.io/reseau-telecom/cover.svg",
+    img: "https://sallcheikh1492.github.io/reseau-telecom/cover.svg",
     metrics: ["2G → 5G", "PWA hors-ligne", "Données ARTP"],
     fr: "Application web (PWA) de référence et de révision sur la performance des réseaux mobiles : KPI (CSSR, DCR…), diagnostic d'alarmes, arbres de décision, optimisation radio, drive test, données de marché ARTP, quiz et simulateur NOC. Conçue de A à Z en HTML/CSS/JS, installable et utilisable hors-ligne.",
     en: "Reference & revision web app (PWA) on mobile-network performance: KPIs (CSSR, DCR…), alarm troubleshooting, decision trees, radio optimization, drive test, ARTP market data, quiz and NOC simulator. Built from scratch in HTML/CSS/JS, installable and offline-ready.",
     tags: ["JavaScript", "HTML/CSS", "PWA", "Télécom", "KPI"],
     links: [
-      { kind: "demo", url: "https://kheuch1492.github.io/reseau-telecom/" },
-      { kind: "repo", url: "https://github.com/kheuch1492/reseau-telecom" },
+      { kind: "demo", url: "https://sallcheikh1492.github.io/reseau-telecom/" },
+      { kind: "repo", url: "https://github.com/sallcheikh1492/reseau-telecom" },
     ],
-  },
-  {
-    icon: "📡", badge: { fr: "Data · Télécom", en: "Data · Telecom" },
-    title: "Network KPI Analytics — Dashboard",
-    metrics: ["60 cellules", "~43k mesures", "2G → 5G"],
-    fr: "Tableau de bord d'analyse de la performance d'un réseau mobile : suivi des KPI (CSSR, DCR, PRB…), détection des cellules en saturation, anomalies, pires cellules et carte de couverture. Données synthétiques réalistes (60 cellules, KPI horaires sur 30 jours).",
-    en: "Mobile-network performance dashboard: KPI monitoring (CSSR, DCR, PRB…), saturated-cell detection, anomalies, worst cells and a coverage map. Realistic synthetic data (60 cells, hourly KPIs over 30 days).",
-    tags: ["Python", "Streamlit", "pandas", "Plotly", "Télécom"],
-    links: [{ kind: "repo", url: "https://github.com/kheuch1492/network-kpi-dashboard" }],
   },
   {
     icon: "📉", badge: { fr: "Data Science", en: "Data Science" },
@@ -46,7 +37,7 @@ const PROJECTS = [
     en: "Identifying at-risk customers to reduce churn: 6 models compared (best: Gradient Boosting, AUC 0.846), per-customer probability scoring and a priority call list (Power BI dashboard).",
     tags: ["Python", "Gradient Boosting", "XGBoost", "Power BI"],
     links: [
-      { kind: "repo", url: "https://github.com/kheuch1492/customer-churn-prediction" },
+      { kind: "repo", url: "https://github.com/sallcheikh1492/customer-churn-prediction" },
       { kind: "dataset", url: "https://www.kaggle.com/datasets/blastchar/telco-customer-churn" },
     ],
   },
@@ -58,7 +49,7 @@ const PROJECTS = [
     fr: "Analyse du chiffre d'affaires, des marges et des profits : évolution mensuelle CA/profit, profit par produit, répartition par segment client (Government, Small Business, Enterprise…) et CA par pays.",
     en: "Revenue, margin and profit analysis: monthly revenue/profit trend, profit by product, breakdown by customer segment (Government, Small Business, Enterprise…) and revenue by country.",
     tags: ["Power BI", "DAX", "SQL", "Modélisation"],
-    links: [{ kind: "repo", url: "https://github.com/kheuch1492/financial-analysis-dashboard" }],
+    links: [{ kind: "repo", url: "https://github.com/sallcheikh1492/financial-analysis-dashboard" }],
   },
   {
     icon: "👥", badge: { fr: "People Analytics", en: "People Analytics" },
@@ -68,7 +59,7 @@ const PROJECTS = [
     fr: "Suivi de l'attrition (33,4 %), du turnover et de l'absentéisme : analyse par département (Production 39,7 %…) et par ancienneté (0-2 ans : 96,8 %) pour cibler la rétention.",
     en: "Attrition (33.4%), turnover and absenteeism tracking: analysis by department (Production 39.7%…) and tenure (0-2 yrs: 96.8%) to target retention.",
     tags: ["Power BI", "DAX", "People Analytics"],
-    links: [{ kind: "repo", url: "https://github.com/kheuch1492/hr-analytics-dashboard" }],
+    links: [{ kind: "repo", url: "https://github.com/sallcheikh1492/hr-analytics-dashboard" }],
   },
   {
     icon: "🛒", badge: { fr: "Business Intelligence", en: "Business Intelligence" },
@@ -79,7 +70,7 @@ const PROJECTS = [
     en: "E-commerce sales analysis (UCI Online Retail dataset): £9M revenue, 19K orders, 4,338 customers, £480 average basket, 65.6% repeat rate, monthly trend and top countries.",
     tags: ["Power BI", "DAX", "Analyse", "Segmentation"],
     links: [
-      { kind: "repo", url: "https://github.com/kheuch1492/ecommerce-sales-analysis" },
+      { kind: "repo", url: "https://github.com/sallcheikh1492/ecommerce-sales-analysis" },
       { kind: "dataset", url: "https://archive.ics.uci.edu/dataset/352/online+retail" },
     ],
   },
@@ -90,16 +81,7 @@ const PROJECTS = [
     fr: "Application web de facturation : gestion des factures, clients et produits.",
     en: "Web billing application: invoices, clients and products management.",
     tags: ["JavaScript", "Web"],
-    links: [{ kind: "repo", url: "https://github.com/kheuch1492/TV7-App" }],
-  },
-  {
-    icon: "🚗", badge: { fr: "Développement", en: "Development" },
-    title: "Thiam &amp; Frère Automobile",
-    img: "assets/thiam-automobile.png",
-    fr: "Application de gestion pour une activité automobile (clients, véhicules, opérations).",
-    en: "Management app for an automotive business (clients, vehicles, operations).",
-    tags: ["TypeScript", "Web"],
-    links: [{ kind: "repo", url: "https://github.com/kheuch1492/thiam-et-frere-automobile" }],
+    links: [{ kind: "repo", url: "https://github.com/sallcheikh1492/TV7-App" }],
   },
 ];
 
