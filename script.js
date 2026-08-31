@@ -77,6 +77,7 @@ const PROJECTS = [
     en: "E-commerce sales analysis (UCI Online Retail dataset): £9M revenue, 19K orders, 4,338 customers, £480 average basket, 65.6% repeat rate, monthly trend and top countries.",
     tags: ["Power BI", "DAX", "Analyse", "Segmentation"],
     links: [
+      { kind: "demo", url: "https://sallcheikh1492.github.io/ecommerce-sales-analysis/reports/dashboard.html" },
       { kind: "repo", url: "https://github.com/sallcheikh1492/ecommerce-sales-analysis" },
       { kind: "dataset", url: "https://archive.ics.uci.edu/dataset/352/online+retail" },
     ],
