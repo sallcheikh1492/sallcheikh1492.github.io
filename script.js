@@ -37,6 +37,7 @@ const PROJECTS = [
     en: "Identifying at-risk customers to reduce churn: 6 models compared (best: Gradient Boosting, AUC 0.846), per-customer probability scoring and a priority call list (Power BI dashboard).",
     tags: ["Python", "Gradient Boosting", "XGBoost", "Power BI"],
     links: [
+      { kind: "demo", url: "https://sallcheikh1492.github.io/customer-churn-prediction/" },
       { kind: "repo", url: "https://github.com/sallcheikh1492/customer-churn-prediction" },
       { kind: "dataset", url: "https://www.kaggle.com/datasets/blastchar/telco-customer-churn" },
     ],
@@ -49,7 +50,10 @@ const PROJECTS = [
     fr: "Analyse du chiffre d'affaires, des marges et des profits : évolution mensuelle CA/profit, profit par produit, répartition par segment client (Government, Small Business, Enterprise…) et CA par pays.",
     en: "Revenue, margin and profit analysis: monthly revenue/profit trend, profit by product, breakdown by customer segment (Government, Small Business, Enterprise…) and revenue by country.",
     tags: ["Power BI", "DAX", "SQL", "Modélisation"],
-    links: [{ kind: "repo", url: "https://github.com/sallcheikh1492/financial-analysis-dashboard" }],
+    links: [
+      { kind: "demo", url: "https://sallcheikh1492.github.io/financial-analysis-dashboard/" },
+      { kind: "repo", url: "https://github.com/sallcheikh1492/financial-analysis-dashboard" },
+    ],
   },
   {
     icon: "👥", badge: { fr: "People Analytics", en: "People Analytics" },
@@ -59,7 +63,10 @@ const PROJECTS = [
     fr: "Suivi de l'attrition (33,4 %), du turnover et de l'absentéisme : analyse par département (Production 39,7 %…) et par ancienneté (0-2 ans : 96,8 %) pour cibler la rétention.",
     en: "Attrition (33.4%), turnover and absenteeism tracking: analysis by department (Production 39.7%…) and tenure (0-2 yrs: 96.8%) to target retention.",
     tags: ["Power BI", "DAX", "People Analytics"],
-    links: [{ kind: "repo", url: "https://github.com/sallcheikh1492/hr-analytics-dashboard" }],
+    links: [
+      { kind: "demo", url: "https://sallcheikh1492.github.io/hr-analytics-dashboard/" },
+      { kind: "repo", url: "https://github.com/sallcheikh1492/hr-analytics-dashboard" },
+    ],
   },
   {
     icon: "🛒", badge: { fr: "Business Intelligence", en: "Business Intelligence" },
