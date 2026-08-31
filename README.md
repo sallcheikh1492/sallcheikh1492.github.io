@@ -1,8 +1,8 @@
-# kheuch1492.github.io
+# sallcheikh1492.github.io
 
 Portfolio personnel de **Cheikh Sall** — Data Analyst | Business Intelligence Engineer.
 
-🌐 **En ligne : https://kheuch1492.github.io**
+🌐 **En ligne : https://sallcheikh1492.github.io**
 
 Site statique (HTML / CSS / JavaScript), bilingue (FR/EN), thème clair/sombre,
 hébergé gratuitement sur GitHub Pages. Aucune dépendance, aucun build.
