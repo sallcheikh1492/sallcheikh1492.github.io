@@ -3,6 +3,19 @@
 // metrics : KPI RÉELS uniquement (jamais inventés)
 const PROJECTS = [
   {
+    icon: "🧾", badge: { fr: "Production · Freelance", en: "Production · Freelance" },
+    title: "TV7-App — Gestion & recouvrement client",
+    img: "assets/tv7-app.png",
+    metrics: ["1 917 clients · 9 zones", "5 collecteurs terrain", "En production depuis 2026"],
+    fr: "Application de gestion et de recouvrement client conçue et exploitée en production pour S2N Multimedia : suivi des encaissements et paiements partiels, opérations en masse, tableau de bord par collecteur, authentification par rôles (JWT), relances SMS automatisées (Africa's Talking) et version PWA installable sur mobile.",
+    en: "Client management and collections app designed and run in production for S2N Multimedia: payment tracking with partial payments, bulk operations, per-collector dashboard, role-based auth (JWT), automated SMS reminders (Africa's Talking) and an installable mobile PWA.",
+    tags: ["FastAPI", "React", "PostgreSQL", "Supabase", "PWA"],
+    links: [
+      { kind: "demo", url: "https://tv-7-app.vercel.app" },
+      { kind: "repo", url: "https://github.com/sallcheikh1492/TV7-App" },
+    ],
+  },
+  {
     icon: "🎓", featured: true, badge: { fr: "Mémoire Master 2", en: "M.Sc. thesis" },
     title: "BI &amp; ML — Optimisation des centres d'appels",
     img: "assets/memoire-preview.png",
@@ -120,15 +133,6 @@ const PROJECTS = [
       { kind: "demo", url: "https://sallcheikh1492.github.io/senegal-food-prices/" },
       { kind: "repo", url: "https://github.com/sallcheikh1492/senegal-food-prices" },
     ],
-  },
-  {
-    icon: "🧾", badge: { fr: "Développement", en: "Development" },
-    title: "TV7-App — Facturation",
-    img: "assets/tv7-app.png",
-    fr: "Application web de facturation : gestion des factures, clients et produits.",
-    en: "Web billing application: invoices, clients and products management.",
-    tags: ["JavaScript", "Web"],
-    links: [{ kind: "repo", url: "https://github.com/sallcheikh1492/TV7-App" }],
   },
 ];
 
